@@ -1,11 +1,13 @@
 package com.cuongmv162.customizedmaterialedittext;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.cuongmv162.customizedmaterialedittext.view.customized.MyMaterialEdittext;
+import com.cuongmv162.customizedmaterialedittext.feedback.FeedbackActivity;
+import com.cuongmv162.customizedmaterialedittext.view.FontUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,14 +16,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyMaterialEdittext email = (MyMaterialEdittext) findViewById(R.id.material_edittext_email);
-        email.setPlaceholder("Email");
-        email.setTopMessageStacked(true);
-
-        MyMaterialEdittext username = (MyMaterialEdittext) findViewById(R.id.material_edittext_username);
-        username.setPlaceholder("Username");
-        username.setTopMessageStacked(false);
-
-        final Button submit = (Button) findViewById(R.id.submit);
+        final Button feedback = (Button) findViewById(R.id.feedback);
+        feedback.setTypeface(FontUtil.getTypeface(this, FontUtil.NOTO_SANS_BOLD));
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, FeedbackActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

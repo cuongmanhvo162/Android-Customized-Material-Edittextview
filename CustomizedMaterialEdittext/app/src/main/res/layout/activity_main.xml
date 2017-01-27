@@ -11,21 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.cuongmv162.customizedmaterialedittext.MainActivity">
 
-    <com.cuongmv162.customizedmaterialedittext.view.customized.MyMaterialEdittext
-        android:id="@+id/material_edittext_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" />
-
-    <com.cuongmv162.customizedmaterialedittext.view.customized.MyMaterialEdittext
-        android:id="@+id/material_edittext_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" />
-
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="text" />
+        android:text="@string/feedback" />
 </LinearLayout>
