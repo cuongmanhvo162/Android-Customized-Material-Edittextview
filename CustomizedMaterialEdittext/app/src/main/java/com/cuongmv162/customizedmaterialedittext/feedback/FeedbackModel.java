@@ -5,4 +5,13 @@ package com.cuongmv162.customizedmaterialedittext.feedback;
  */
 
 public interface FeedbackModel {
+    interface OnSendFeedbackListener {
+        void onNameError();
+
+        void onEmailError();
+
+        void onContentError();
+    }
+
+    void sendFeedback(String name, String email, String content, OnSendFeedbackListener onSendFeedbackListener);
 }

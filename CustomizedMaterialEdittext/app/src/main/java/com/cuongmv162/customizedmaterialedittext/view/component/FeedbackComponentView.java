@@ -55,5 +55,6 @@ public class FeedbackComponentView extends LinearLayout {
 
         mContent = (MyMaterialEdittext) view.findViewById(R.id.content);
         mContent.setPlaceholder("Content");
+        mContent.setMutipleLine(true);
     }
 }

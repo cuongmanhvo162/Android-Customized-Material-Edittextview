@@ -5,4 +5,17 @@ package com.cuongmv162.customizedmaterialedittext.feedback;
  */
 
 public interface FeedbackView {
+    void showProgress();
+
+    void hideProgress();
+
+    void setNameError();
+
+    void setEmailError();
+
+    void setContentError();
+
+    void onFeedbackSuccess();
+
+    void onFeedbackFailed();
 }

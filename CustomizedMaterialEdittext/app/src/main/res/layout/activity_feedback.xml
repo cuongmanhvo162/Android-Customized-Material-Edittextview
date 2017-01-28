@@ -5,7 +5,15 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
     <com.cuongmv162.customizedmaterialedittext.view.component.FeedbackComponentView
+        android:id="@+id/feedback_component_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

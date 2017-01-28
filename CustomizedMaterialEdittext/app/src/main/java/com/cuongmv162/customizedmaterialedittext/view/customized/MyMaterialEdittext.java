@@ -3,6 +3,7 @@ package com.cuongmv162.customizedmaterialedittext.view.customized;
 import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
@@ -126,6 +127,20 @@ public class MyMaterialEdittext extends RelativeLayout {
         }
     }
 
+    public void setInputAsPhone(boolean asPhoneNumber) {
+        if (asPhoneNumber) {
+            mEditText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_CLASS_PHONE);
+        }
+    }
+
+    public void setMutipleLine(boolean multipleLine) {
+        if (multipleLine) {
+            mEditText.setSingleLine(false);
+        } else {
+            mEditText.setSingleLine(true);
+        }
+    }
+
     private void displayTopMessage(boolean display) {
         if (display) {
             mTopMessage.setVisibility(View.VISIBLE);
@@ -141,4 +156,5 @@ public class MyMaterialEdittext extends RelativeLayout {
             mBottomLine.setVisibility(View.GONE);
         }
     }
+
 }
